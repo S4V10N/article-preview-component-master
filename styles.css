@@ -25,7 +25,7 @@ body{
     place-content: center;
     min-height: 100vh;
     font-family: "Manrope", sans-serif;
-    background-color: var(--GRAY-BACKGROUND);
+    background-color: var(--LIGHT-GRAYISH-BLUE);
 }
 article{
     display: flex;
