@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+.attribution a { 
+    color: rgb(155, 85, 155);
+    text-decoration: none;
+}
+:root{
+    --VERY-DARK-GRAYISH-BLUE: hsl(217, 19%, 35%);
+    --DESATURATED-DARK-BLUE: hsl(214, 17%, 51%);
+    --GRAYISH-BLUE: hsl(212, 23%, 69%);
+    --GRAY-BACKGROUND: hsla(212, 23%, 69%, 0.500);
+    --LIGHT-GRAYISH-BLUE: hsl(210, 46%, 95%);
+    --LIGHT-FONT: 500;
+    --BOLD-FONT: 700;
+}
+body{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: "Manrope", sans-serif;
+    background-color: var(--GRAY-BACKGROUND);
+}
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.image{
+    width: 34rem;
+    background-color: white;
+    background-image: url(images/drawers.jpg);
+    background-repeat: no-repeat;
+    height: 22.8rem;
+    background-size: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+.desc{
+    width: 34rem;
+    background-color: white;
+    padding: 4rem 0 0 0;
+    border-radius: 0 0 1rem 1rem;
+    position: relative;
+}
+.profile-pic{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+.desc__text h1{
+    font-size: 1.8rem;
+    color: var(--VERY-DARK-GRAYISH-BLUE);
+    line-height: 1.4em;
+    margin-bottom: 1.5rem;
+    width: 29rem;
+    margin-left:3rem;
+}
+.desc__text p{
+    font-size: 1.4rem;
+    line-height: 1.5em;
+    color: var(--DESATURATED-DARK-BLUE);
+    width: 27rem;
+    margin-left: 3rem;
+}
+.desc__text{
+    margin-bottom: 3rem;
+}
+.desc__profile{
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+    gap: 4rem;
+    position: relative;
+}
+.profile-info{
+    margin-left: -2rem;
+    margin-bottom: 1.5rem;
+}
+.profile-info p{
+    font-size: 1.3rem;
+    color: var(--DESATURATED-DARK-BLUE);
+}
+.pop-up{
+    width: 2rem;
+}
+button{
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    margin-right: 3rem;
+}
+.desc__profile--hidden{
+    background-color: var(--VERY-DARK-GRAYISH-BLUE);
+    color: var(--GRAYISH-BLUE);
+    padding-left: 3rem;
+    display: none;
+    align-items: center;
+    height: 6.5rem;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 0 0 1rem 1rem;
+}
+.desc__profile--hidden h2{
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+.socials{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: 2rem;
+}
+footer{
+    margin: 1rem 0 1rem 0;
+    text-align: center;
+    font-size: 1.4rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@media (min-width: 1440px) {
+    article{
+        flex-direction: row;
+        align-items: center;
+        height: 31rem;
+    }
+    .image{
+        height: 100%;
+        width: 31rem;
+        border-radius: 1rem 0 0 1rem;
+    }
+    .desc{
+        height: 100%;
+        width: 50rem;
+        border-radius: 0 1rem 1rem 0;
+        padding: 4rem 0 3rem 5rem;
+    }
+    .desc__text h1,.desc__text p{
+        margin-left: 0;
+    }
+    .desc__text h1{
+        font-size: 2.2rem;
+        width: 37rem;
+    }
+    .desc__text p{
+        font-size: 1.5rem;
+        width: 40rem;
+    }
+    .desc__profile{
+        margin-left: 0;
+        margin-top: -1rem;
+    }
+    .desc__profile--hidden::after{
+        content: "";
+        background-color: var(--VERY-DARK-GRAYISH-BLUE);
+        width: 4rem;
+        height: 4rem;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%) rotate(45deg);
+    }
+    .desc__profile--hidden{
+        display: none;
+        top: 49%;
+        left: calc(70% - 3rem);
+        width: 25rem;
+        border-radius: 1rem;
+    }
+    .socials{
+        z-index: 2;
+        position: absolute;
+        left: calc(50% - 3rem);
+    }
+}
